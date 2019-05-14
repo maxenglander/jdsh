@@ -19,8 +19,8 @@ const fallbackValue = require('fela-plugin-fallback-value');
 const prefixer = require('fela-plugin-prefixer');
 
 // xterm
-require('/app/node_modules/xterm/dist/xterm');
-require('/app/node_modules/xterm/dist/xterm.css');
+require('xterm/dist/xterm');
+require('xterm/dist/xterm.css');
 
 /* Import Components */
 const RootPage = require('./pages/RootPage');
