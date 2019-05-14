@@ -33,7 +33,7 @@ class AccessGranted extends React.Component {
           innerRef={this._textRef}
           width={this.props.width}>
           <video onEnded={this._beginWipeOut} ref={this._video}>
-            <source src="https://cdn.glitch.com/45380538-d456-4293-b98f-ae0843d6beb4%2Faccess-granted.webm?1557800325907" type="video/webm" />
+            <source src="/asset/access-granted.webm" type="video/webm" />
           </video>
         </StyledDiv>
         <WipeOut backgroundColor={Colors.BLACK}

@@ -17,7 +17,7 @@ class WipeOut extends React.Component {
         transform={`translateX(${this.props.enabled ? '-30%' : '100%'})`}
         transition={'transform 3s linear'}
         width={'100vw'}>
-        <img src={'https://cdn.glitch.com/45380538-d456-4293-b98f-ae0843d6beb4%2Fgreendogmed.png?1557711883341'}
+        <img src={'/asset/greendogmed.png'}
           style={{
             height: '150px',
             marginLeft: '-75px'
