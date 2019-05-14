@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JONALD DUDD 2019</title>
+    <meta name="description" content="JONALD DUDD 2019">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        cursor: url('https://cdn.glitch.com/45380538-d456-4293-b98f-ae0843d6beb4%2Fgreendogsm.png?1557565579059'), auto;
+      }
+      
+      body, #main {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        max-height: 100vh;
+        min-height: 100vh;
+        padding: 0;
+      }
+    </style>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      uniform vec3 viewVector;
+      uniform float c;
+      uniform float p;
+      varying float intensity;
+      void main() 
+      {
+          vec3 vNormal = normalize( normalMatrix * normal );
+        vec3 vNormel = normalize( normalMatrix * viewVector );
+        intensity = pow( c - dot(vNormal, vNormel), p );
+
+          gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+      }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-vertex"> 
+      uniform vec3 glowColor;
+      varying float intensity;
+      void main() 
+      {
+        vec3 glow = glowColor * intensity;
+          gl_FragColor = vec4( glow, 1.0 );
+      }
+    </script>
+  </head>
+  <body  style="display: flex; flex-direction: column; max-height: 100vh; min-height: 100vh;">
+      <div id="main" style="display: flex; flex-direction: column; max-height: 100vh; min-height: 100vh; overflow: hidden;">
+      </div>
+    
+      <!-- bundle all the scripts! thanks to webpack -->
+      <script type="text/javascript" src="/bundle.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "name": "starter-react-redux",
+  "version": "0.0.1",
+  "description": "A starter app for using Redux to manage state in React",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack && node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "jsx-loader": "^0.13.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.30.0",
+    "react-router-dom": "^5.0.0",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1",
+    "webpack-cli": "^3.3.0",
+    "react-fela": "^10.2.4",
+    "ascii-art": "^1.5.1",
+    "figlet": "^1.2.1",
+    "xterm": "^3.12.2",
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
+    "body-parser": "^1.19.0",
+    "cfonts": "^2.4.3",
+    "window-size": "^1.1.1",
+    "redux-thunk": "^2.3.0",
+    "three": "^0.104.0",
+    "text-loader": "^0.0.1",
+    "raw-loader": "^2.0.0",
+    "fela-plugin-prefixer": "^10.3.0",
+    "fela-plugin-fallback-value": "^10.3.0"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/starter-react-redux"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
