@@ -57,10 +57,15 @@ app.post('/email', function(request, response) {
   });
 });
 
+app.get("/video", function(request, response) {
+  response.sendFile(__dirname + '/videos/' + request.query.id);
+});
+
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("*", function(request, response) {
   response.sendFile(__dirname + '/app/index.html');
 });
+
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
